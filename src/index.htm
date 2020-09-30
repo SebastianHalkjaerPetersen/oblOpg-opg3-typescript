@@ -16,12 +16,19 @@
 </head>
 
 <body>
-  <h1>Hello</h1>
+  <h1 style="">Hello</h1>
   <div id="app">
-    <input v-model="name" placeholder="Name">
-    <button v-on:click="sayHello()" class="btn btn-primary">Say hello</button>
-    <div>{{ greeting }}</div>
+    <div class="row">
+      <input style="margin-left: 50px; margin-right: 10px;" v-model= "incString" placeholder="Text to manipulate">
+      
+    
+      <button style="margin-left: 10px; margin-right: 10px;" v-on:click="ToUpperCase()" class="btn btn-primary">Uppercase Text</button>
+    
+      <button style="margin-left: 10px; margin-right: 10px;" v-on:click="ToLowerCase()" class="btn btn-primary">LowercaseText</button>
+      <div>{{ outString }}</div>
+    </div>
   </div>
+  
 
   <script src="bundle.js"></script>
 </body>

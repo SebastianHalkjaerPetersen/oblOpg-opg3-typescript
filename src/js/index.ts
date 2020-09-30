@@ -5,8 +5,12 @@ new Vue({
     el: "#app",
     data: {
         name: "",
-        greeting: ""
+        greeting: "",
+        outString: "",
+        mode: ""        
+
     },
+    
     methods: {
         sayHello() {
             console.log("Say Hello " + this.name)
@@ -16,6 +20,34 @@ new Vue({
             else {
                 this.greeting = "Hello " + this.name
             }
+            
         }
-    }
+        , ChangeCase(){
+            if(this.mode=="Upper"){
+                this.ToUpperCase()
+            }else if(this=="Lower"){
+                this.ToLowerCase()
+            }
+        }
+        , ToUpperCase(){
+           if(this.incString == ""){
+                this.outString = "the textfield is empty"
+           }
+           else{
+               this.outString = this.incString.toUpperCase()
+           }
+           
+        }
+        , ToLowerCase(){
+            if(this.incString == ""){
+                this.outString = "the textfield is empty"
+           }
+           else{
+               this.outString = this.incString.toLowerCase()
+           }
+        }
+        
+    },
+
+    
 })
